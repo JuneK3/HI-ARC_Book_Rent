@@ -25,7 +25,7 @@ class GenreSerializer(serializers.ModelSerializer):
         model = models.Genre
         fields = '__all__'
 
-class LanguageSerializer(serializers.Serializer):
+class LanguageSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = models.Genre

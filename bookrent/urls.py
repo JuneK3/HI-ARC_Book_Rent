@@ -24,10 +24,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
 ]
 
-urlpatterns = [
-    path('api/books/', include('catalog.urls')),
-]
-
+"""
 urlpatterns += [
     path('catalog/', include('catalog.urls')),
 ]
@@ -35,6 +32,11 @@ urlpatterns += [
 urlpatterns += [
     path('', RedirectView.as_view(url='/catalog/')),
 ]
+"""
 
-urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+urlpatterns = [
+    path('api/books/', include('catalog.urls')),
+] + static(
+    settings.STATIC_URL, document_root=settings.STATIC_ROOT
+    )
 
