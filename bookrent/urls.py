@@ -24,6 +24,10 @@ urlpatterns = [
     path('admin/', admin.site.urls),
 ]
 
+urlpatterns = [
+    path('api/books/', include('catalog.urls')),
+]
+
 urlpatterns += [
     path('catalog/', include('catalog.urls')),
 ]
