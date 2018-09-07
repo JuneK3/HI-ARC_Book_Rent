@@ -3,7 +3,7 @@ from . import views
 
 urlpatterns = [
     url(
-        regex=r'^all/$',
+        regex=r'^$',
         view=views.ListAllBooks.as_view(),
         name='all_books',
     ),
